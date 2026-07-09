@@ -4,6 +4,49 @@
 
 #define N 1024
 
+// Struct data perilaku pemakaian aplikasi tiap user
+typedef struct {
+    int jamAktif;         // 0-23
+    int durasiMenit;      // 0-180
+    int kategoriFavorit;  // 0-4 (0=Gaming, 1=Musik, 2=Kuliner, 3=Olahraga, 4=Fashion)
+} Aktivitas;
+
+// Hitung skor kemiripan aktivitas antara 2 user (maks 10)
+int hitungSkor(Aktivitas a, Aktivitas b) {
+    int skor = 0;
+    if (abs(a.jamAktif - b.jamAktif) <= 2) skor += 4;
+    if (abs(a.durasiMenit - b.durasiMenit) <= 20) skor += 3;
+    if (a.kategoriFavorit == b.kategoriFavorit) skor += 3;
+    return skor;
+}
+
+// Baca data aktivitas dari CSV, ambil sebanyak n baris
+Aktivitas* bacaDataCSV(const char *filename, int n) {
+    Aktivitas *aktivitas = (Aktivitas*) malloc(n * sizeof(Aktivitas));
+    FILE *fp = fopen(filename, "r");
+    if (fp == NULL) {
+        printf("Gagal membuka file %s!\n", filename);
+        exit(1);
+    }
+
+    char buffer[100];
+    fgets(buffer, sizeof(buffer), fp); // lewati baris header
+
+    for (int i = 0; i < n; i++) {
+        if (fgets(buffer, sizeof(buffer), fp) == NULL) {
+            printf("Data CSV kurang dari N=%d baris!\n", n);
+            exit(1);
+        }
+        sscanf(buffer, "%d,%d,%d",
+               &aktivitas[i].jamAktif,
+               &aktivitas[i].durasiMenit,
+               &aktivitas[i].kategoriFavorit);
+    }
+
+    fclose(fp);
+    return aktivitas;
+}
+
 int main(int argc, char** argv) {
     MPI_Init(&argc, &argv);
 
@@ -17,10 +60,15 @@ int main(int argc, char** argv) {
 
     if (rank == 0) {
         Result = (int*) malloc(N * N * sizeof(int));
-        srand(42);
-        for (int i = 0; i < N * N; i++) {
-            M[i] = rand() % 10;
+
+        // Baca data dari CSV, lalu isi matriks M berdasarkan skor kemiripan
+        Aktivitas *aktivitas = bacaDataCSV("data_aktivitas.csv", N);
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                M[i * N + j] = hitungSkor(aktivitas[i], aktivitas[j]);
+            }
         }
+        free(aktivitas);
     }
 
     double start, end;

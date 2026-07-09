@@ -1,5 +1,5 @@
 === HASIL BENCHMARK SNAPGRAM ===
-Tanggal: Sat Jul  4 16:45:38 WIB 2026
+Tanggal: Thu Jul  9 20:47:14 WIB 2026
 
 
 ===== N = 256 =====
@@ -8,128 +8,128 @@ Tanggal: Sat Jul  4 16:45:38 WIB 2026
 Ukuran matriks: 256 x 256
 
 Contoh hasil (5 baris pertama):
-Baris 0 -> Max: 5584 di kolom 251
-Baris 1 -> Max: 5618 di kolom 31
-Baris 2 -> Max: 6147 di kolom 31
-Baris 3 -> Max: 5572 di kolom 3
-Baris 4 -> Max: 5655 di kolom 56
+Baris 0 -> Max: 2282 di kolom 0
+Baris 1 -> Max: 2977 di kolom 1
+Baris 2 -> Max: 2457 di kolom 2
+Baris 3 -> Max: 2527 di kolom 3
+Baris 4 -> Max: 2553 di kolom 4
 
 === Waktu Eksekusi ===
-Perkalian matriks : 0.042403 detik
-Cari max per baris: 0.000080 detik
-Total             : 0.042483 detik
+Perkalian matriks : 0.043794 detik
+Cari max per baris: 0.000141 detik
+Total             : 0.043935 detik
 --- OpenMP (1 thread) ---
 === SnapGram - Versi OpenMP ===
 Ukuran matriks: 256 x 256
 Jumlah thread tersedia: 1
 
 Contoh hasil (5 baris pertama):
-Baris 0 -> Max: 5584 di kolom 251
-Baris 1 -> Max: 5618 di kolom 31
-Baris 2 -> Max: 6147 di kolom 31
-Baris 3 -> Max: 5572 di kolom 3
-Baris 4 -> Max: 5655 di kolom 56
+Baris 0 -> Max: 2282 di kolom 0
+Baris 1 -> Max: 2977 di kolom 1
+Baris 2 -> Max: 2457 di kolom 2
+Baris 3 -> Max: 2527 di kolom 3
+Baris 4 -> Max: 2553 di kolom 4
 
 === Waktu Eksekusi ===
-Perkalian matriks : 0.041438 detik
-Cari max per baris: 0.000079 detik
-Total             : 0.041517 detik
+Perkalian matriks : 0.046920 detik
+Cari max per baris: 0.000097 detik
+Total             : 0.047017 detik
 --- OpenMP (2 thread) ---
 === SnapGram - Versi OpenMP ===
 Ukuran matriks: 256 x 256
 Jumlah thread tersedia: 2
 
 Contoh hasil (5 baris pertama):
-Baris 0 -> Max: 5584 di kolom 251
-Baris 1 -> Max: 5618 di kolom 31
-Baris 2 -> Max: 6147 di kolom 31
-Baris 3 -> Max: 5572 di kolom 3
-Baris 4 -> Max: 5655 di kolom 56
+Baris 0 -> Max: 2282 di kolom 0
+Baris 1 -> Max: 2977 di kolom 1
+Baris 2 -> Max: 2457 di kolom 2
+Baris 3 -> Max: 2527 di kolom 3
+Baris 4 -> Max: 2553 di kolom 4
 
 === Waktu Eksekusi ===
-Perkalian matriks : 0.017928 detik
-Cari max per baris: 0.000082 detik
-Total             : 0.018010 detik
+Perkalian matriks : 0.031886 detik
+Cari max per baris: 0.000122 detik
+Total             : 0.032008 detik
 --- OpenMP (4 thread) ---
 === SnapGram - Versi OpenMP ===
 Ukuran matriks: 256 x 256
 Jumlah thread tersedia: 4
 
 Contoh hasil (5 baris pertama):
-Baris 0 -> Max: 5584 di kolom 251
-Baris 1 -> Max: 5618 di kolom 31
-Baris 2 -> Max: 6147 di kolom 31
-Baris 3 -> Max: 5572 di kolom 3
-Baris 4 -> Max: 5655 di kolom 56
+Baris 0 -> Max: 2282 di kolom 0
+Baris 1 -> Max: 2977 di kolom 1
+Baris 2 -> Max: 2457 di kolom 2
+Baris 3 -> Max: 2527 di kolom 3
+Baris 4 -> Max: 2553 di kolom 4
 
 === Waktu Eksekusi ===
-Perkalian matriks : 0.016743 detik
-Cari max per baris: 0.000103 detik
-Total             : 0.016846 detik
+Perkalian matriks : 0.022652 detik
+Cari max per baris: 0.000104 detik
+Total             : 0.022756 detik
 --- OpenMP (8 thread) ---
 === SnapGram - Versi OpenMP ===
 Ukuran matriks: 256 x 256
 Jumlah thread tersedia: 8
 
 Contoh hasil (5 baris pertama):
-Baris 0 -> Max: 5584 di kolom 251
-Baris 1 -> Max: 5618 di kolom 31
-Baris 2 -> Max: 6147 di kolom 31
-Baris 3 -> Max: 5572 di kolom 3
-Baris 4 -> Max: 5655 di kolom 56
+Baris 0 -> Max: 2282 di kolom 0
+Baris 1 -> Max: 2977 di kolom 1
+Baris 2 -> Max: 2457 di kolom 2
+Baris 3 -> Max: 2527 di kolom 3
+Baris 4 -> Max: 2553 di kolom 4
 
 === Waktu Eksekusi ===
-Perkalian matriks : 0.016534 detik
-Cari max per baris: 0.000110 detik
-Total             : 0.016644 detik
+Perkalian matriks : 0.032451 detik
+Cari max per baris: 0.000109 detik
+Total             : 0.032560 detik
 --- MPI (1 proses) ---
 === SnapGram - Versi MPI ===
 Ukuran matriks: 256 x 256
 Jumlah proses: 1
 
 Contoh hasil (5 baris pertama):
-Baris 0 -> Max: 5584 di kolom 251
-Baris 1 -> Max: 5618 di kolom 31
-Baris 2 -> Max: 6147 di kolom 31
-Baris 3 -> Max: 5572 di kolom 3
-Baris 4 -> Max: 5655 di kolom 56
+Baris 0 -> Max: 2282 di kolom 0
+Baris 1 -> Max: 2977 di kolom 1
+Baris 2 -> Max: 2457 di kolom 2
+Baris 3 -> Max: 2527 di kolom 3
+Baris 4 -> Max: 2553 di kolom 4
 
 === Waktu Eksekusi ===
-Perkalian matriks : 0.036830 detik
-Cari max per baris: 0.000078 detik
-Total             : 0.036908 detik
+Perkalian matriks : 0.036477 detik
+Cari max per baris: 0.000079 detik
+Total             : 0.036556 detik
 --- MPI (2 proses) ---
 === SnapGram - Versi MPI ===
 Ukuran matriks: 256 x 256
 Jumlah proses: 2
 
 Contoh hasil (5 baris pertama):
-Baris 0 -> Max: 5584 di kolom 251
-Baris 1 -> Max: 5618 di kolom 31
-Baris 2 -> Max: 6147 di kolom 31
-Baris 3 -> Max: 5572 di kolom 3
-Baris 4 -> Max: 5655 di kolom 56
+Baris 0 -> Max: 2282 di kolom 0
+Baris 1 -> Max: 2977 di kolom 1
+Baris 2 -> Max: 2457 di kolom 2
+Baris 3 -> Max: 2527 di kolom 3
+Baris 4 -> Max: 2553 di kolom 4
 
 === Waktu Eksekusi ===
-Perkalian matriks : 0.031909 detik
-Cari max per baris: 0.000075 detik
-Total             : 0.031985 detik
+Perkalian matriks : 0.016927 detik
+Cari max per baris: 0.000086 detik
+Total             : 0.017012 detik
 --- MPI (4 proses) ---
 === SnapGram - Versi MPI ===
 Ukuran matriks: 256 x 256
 Jumlah proses: 4
 
 Contoh hasil (5 baris pertama):
-Baris 0 -> Max: 5584 di kolom 251
-Baris 1 -> Max: 5618 di kolom 31
-Baris 2 -> Max: 6147 di kolom 31
-Baris 3 -> Max: 5572 di kolom 3
-Baris 4 -> Max: 5655 di kolom 56
+Baris 0 -> Max: 2282 di kolom 0
+Baris 1 -> Max: 2977 di kolom 1
+Baris 2 -> Max: 2457 di kolom 2
+Baris 3 -> Max: 2527 di kolom 3
+Baris 4 -> Max: 2553 di kolom 4
 
 === Waktu Eksekusi ===
-Perkalian matriks : 0.021315 detik
-Cari max per baris: 0.000122 detik
-Total             : 0.021437 detik
+Perkalian matriks : 0.024316 detik
+Cari max per baris: 0.000464 detik
+Total             : 0.024781 detik
 
 ===== N = 512 =====
 --- Sequential ---
@@ -137,128 +137,128 @@ Total             : 0.021437 detik
 Ukuran matriks: 512 x 512
 
 Contoh hasil (5 baris pertama):
-Baris 0 -> Max: 10994 di kolom 56
-Baris 1 -> Max: 11569 di kolom 56
-Baris 2 -> Max: 11391 di kolom 398
-Baris 3 -> Max: 11523 di kolom 206
-Baris 4 -> Max: 11879 di kolom 206
+Baris 0 -> Max: 4182 di kolom 0
+Baris 1 -> Max: 5243 di kolom 1
+Baris 2 -> Max: 5221 di kolom 2
+Baris 3 -> Max: 4806 di kolom 3
+Baris 4 -> Max: 5316 di kolom 4
 
 === Waktu Eksekusi ===
-Perkalian matriks : 0.281187 detik
+Perkalian matriks : 0.426663 detik
 Cari max per baris: 0.000292 detik
-Total             : 0.281479 detik
+Total             : 0.426955 detik
 --- OpenMP (1 thread) ---
 === SnapGram - Versi OpenMP ===
 Ukuran matriks: 512 x 512
 Jumlah thread tersedia: 1
 
 Contoh hasil (5 baris pertama):
-Baris 0 -> Max: 10994 di kolom 56
-Baris 1 -> Max: 11569 di kolom 56
-Baris 2 -> Max: 11391 di kolom 398
-Baris 3 -> Max: 11523 di kolom 206
-Baris 4 -> Max: 11879 di kolom 206
+Baris 0 -> Max: 4182 di kolom 0
+Baris 1 -> Max: 5243 di kolom 1
+Baris 2 -> Max: 5221 di kolom 2
+Baris 3 -> Max: 4806 di kolom 3
+Baris 4 -> Max: 5316 di kolom 4
 
 === Waktu Eksekusi ===
-Perkalian matriks : 0.286579 detik
-Cari max per baris: 0.000353 detik
-Total             : 0.286932 detik
+Perkalian matriks : 0.322037 detik
+Cari max per baris: 0.000305 detik
+Total             : 0.322342 detik
 --- OpenMP (2 thread) ---
 === SnapGram - Versi OpenMP ===
 Ukuran matriks: 512 x 512
 Jumlah thread tersedia: 2
 
 Contoh hasil (5 baris pertama):
-Baris 0 -> Max: 10994 di kolom 56
-Baris 1 -> Max: 11569 di kolom 56
-Baris 2 -> Max: 11391 di kolom 398
-Baris 3 -> Max: 11523 di kolom 206
-Baris 4 -> Max: 11879 di kolom 206
+Baris 0 -> Max: 4182 di kolom 0
+Baris 1 -> Max: 5243 di kolom 1
+Baris 2 -> Max: 5221 di kolom 2
+Baris 3 -> Max: 4806 di kolom 3
+Baris 4 -> Max: 5316 di kolom 4
 
 === Waktu Eksekusi ===
-Perkalian matriks : 0.159608 detik
-Cari max per baris: 0.000426 detik
-Total             : 0.160034 detik
+Perkalian matriks : 0.228268 detik
+Cari max per baris: 0.000310 detik
+Total             : 0.228578 detik
 --- OpenMP (4 thread) ---
 === SnapGram - Versi OpenMP ===
 Ukuran matriks: 512 x 512
 Jumlah thread tersedia: 4
 
 Contoh hasil (5 baris pertama):
-Baris 0 -> Max: 10994 di kolom 56
-Baris 1 -> Max: 11569 di kolom 56
-Baris 2 -> Max: 11391 di kolom 398
-Baris 3 -> Max: 11523 di kolom 206
-Baris 4 -> Max: 11879 di kolom 206
+Baris 0 -> Max: 4182 di kolom 0
+Baris 1 -> Max: 5243 di kolom 1
+Baris 2 -> Max: 5221 di kolom 2
+Baris 3 -> Max: 4806 di kolom 3
+Baris 4 -> Max: 5316 di kolom 4
 
 === Waktu Eksekusi ===
-Perkalian matriks : 0.131510 detik
-Cari max per baris: 0.000552 detik
-Total             : 0.132061 detik
+Perkalian matriks : 0.150960 detik
+Cari max per baris: 0.000352 detik
+Total             : 0.151312 detik
 --- OpenMP (8 thread) ---
 === SnapGram - Versi OpenMP ===
 Ukuran matriks: 512 x 512
 Jumlah thread tersedia: 8
 
 Contoh hasil (5 baris pertama):
-Baris 0 -> Max: 10994 di kolom 56
-Baris 1 -> Max: 11569 di kolom 56
-Baris 2 -> Max: 11391 di kolom 398
-Baris 3 -> Max: 11523 di kolom 206
-Baris 4 -> Max: 11879 di kolom 206
+Baris 0 -> Max: 4182 di kolom 0
+Baris 1 -> Max: 5243 di kolom 1
+Baris 2 -> Max: 5221 di kolom 2
+Baris 3 -> Max: 4806 di kolom 3
+Baris 4 -> Max: 5316 di kolom 4
 
 === Waktu Eksekusi ===
-Perkalian matriks : 0.091278 detik
-Cari max per baris: 0.000585 detik
-Total             : 0.091863 detik
+Perkalian matriks : 0.145281 detik
+Cari max per baris: 0.000555 detik
+Total             : 0.145835 detik
 --- MPI (1 proses) ---
 === SnapGram - Versi MPI ===
 Ukuran matriks: 512 x 512
 Jumlah proses: 1
 
 Contoh hasil (5 baris pertama):
-Baris 0 -> Max: 10994 di kolom 56
-Baris 1 -> Max: 11569 di kolom 56
-Baris 2 -> Max: 11391 di kolom 398
-Baris 3 -> Max: 11523 di kolom 206
-Baris 4 -> Max: 11879 di kolom 206
+Baris 0 -> Max: 4182 di kolom 0
+Baris 1 -> Max: 5243 di kolom 1
+Baris 2 -> Max: 5221 di kolom 2
+Baris 3 -> Max: 4806 di kolom 3
+Baris 4 -> Max: 5316 di kolom 4
 
 === Waktu Eksekusi ===
-Perkalian matriks : 0.321047 detik
-Cari max per baris: 0.000283 detik
-Total             : 0.321330 detik
+Perkalian matriks : 0.352220 detik
+Cari max per baris: 0.000533 detik
+Total             : 0.352753 detik
 --- MPI (2 proses) ---
 === SnapGram - Versi MPI ===
 Ukuran matriks: 512 x 512
 Jumlah proses: 2
 
 Contoh hasil (5 baris pertama):
-Baris 0 -> Max: 10994 di kolom 56
-Baris 1 -> Max: 11569 di kolom 56
-Baris 2 -> Max: 11391 di kolom 398
-Baris 3 -> Max: 11523 di kolom 206
-Baris 4 -> Max: 11879 di kolom 206
+Baris 0 -> Max: 4182 di kolom 0
+Baris 1 -> Max: 5243 di kolom 1
+Baris 2 -> Max: 5221 di kolom 2
+Baris 3 -> Max: 4806 di kolom 3
+Baris 4 -> Max: 5316 di kolom 4
 
 === Waktu Eksekusi ===
-Perkalian matriks : 0.200777 detik
-Cari max per baris: 0.000292 detik
-Total             : 0.201069 detik
+Perkalian matriks : 0.311260 detik
+Cari max per baris: 0.000447 detik
+Total             : 0.311707 detik
 --- MPI (4 proses) ---
 === SnapGram - Versi MPI ===
 Ukuran matriks: 512 x 512
 Jumlah proses: 4
 
 Contoh hasil (5 baris pertama):
-Baris 0 -> Max: 10994 di kolom 56
-Baris 1 -> Max: 11569 di kolom 56
-Baris 2 -> Max: 11391 di kolom 398
-Baris 3 -> Max: 11523 di kolom 206
-Baris 4 -> Max: 11879 di kolom 206
+Baris 0 -> Max: 4182 di kolom 0
+Baris 1 -> Max: 5243 di kolom 1
+Baris 2 -> Max: 5221 di kolom 2
+Baris 3 -> Max: 4806 di kolom 3
+Baris 4 -> Max: 5316 di kolom 4
 
 === Waktu Eksekusi ===
-Perkalian matriks : 0.141887 detik
-Cari max per baris: 0.000343 detik
-Total             : 0.142231 detik
+Perkalian matriks : 0.224500 detik
+Cari max per baris: 0.000868 detik
+Total             : 0.225368 detik
 
 ===== N = 1024 =====
 --- Sequential ---
@@ -266,125 +266,125 @@ Total             : 0.142231 detik
 Ukuran matriks: 1024 x 1024
 
 Contoh hasil (5 baris pertama):
-Baris 0 -> Max: 21751 di kolom 998
-Baris 1 -> Max: 22701 di kolom 998
-Baris 2 -> Max: 22715 di kolom 437
-Baris 3 -> Max: 22217 di kolom 998
-Baris 4 -> Max: 22026 di kolom 491
+Baris 0 -> Max: 8544 di kolom 0
+Baris 1 -> Max: 10689 di kolom 1
+Baris 2 -> Max: 10592 di kolom 2
+Baris 3 -> Max: 8762 di kolom 3
+Baris 4 -> Max: 9769 di kolom 4
 
 === Waktu Eksekusi ===
-Perkalian matriks : 4.265101 detik
-Cari max per baris: 0.001034 detik
-Total             : 4.266135 detik
+Perkalian matriks : 5.770976 detik
+Cari max per baris: 0.002296 detik
+Total             : 5.773272 detik
 --- OpenMP (1 thread) ---
 === SnapGram - Versi OpenMP ===
 Ukuran matriks: 1024 x 1024
 Jumlah thread tersedia: 1
 
 Contoh hasil (5 baris pertama):
-Baris 0 -> Max: 21751 di kolom 998
-Baris 1 -> Max: 22701 di kolom 998
-Baris 2 -> Max: 22715 di kolom 437
-Baris 3 -> Max: 22217 di kolom 998
-Baris 4 -> Max: 22026 di kolom 491
+Baris 0 -> Max: 8544 di kolom 0
+Baris 1 -> Max: 10689 di kolom 1
+Baris 2 -> Max: 10592 di kolom 2
+Baris 3 -> Max: 8762 di kolom 3
+Baris 4 -> Max: 9769 di kolom 4
 
 === Waktu Eksekusi ===
-Perkalian matriks : 4.105296 detik
-Cari max per baris: 0.001089 detik
-Total             : 4.106385 detik
+Perkalian matriks : 5.596464 detik
+Cari max per baris: 0.002181 detik
+Total             : 5.598645 detik
 --- OpenMP (2 thread) ---
 === SnapGram - Versi OpenMP ===
 Ukuran matriks: 1024 x 1024
 Jumlah thread tersedia: 2
 
 Contoh hasil (5 baris pertama):
-Baris 0 -> Max: 21751 di kolom 998
-Baris 1 -> Max: 22701 di kolom 998
-Baris 2 -> Max: 22715 di kolom 437
-Baris 3 -> Max: 22217 di kolom 998
-Baris 4 -> Max: 22026 di kolom 491
+Baris 0 -> Max: 8544 di kolom 0
+Baris 1 -> Max: 10689 di kolom 1
+Baris 2 -> Max: 10592 di kolom 2
+Baris 3 -> Max: 8762 di kolom 3
+Baris 4 -> Max: 9769 di kolom 4
 
 === Waktu Eksekusi ===
-Perkalian matriks : 2.105558 detik
-Cari max per baris: 0.001980 detik
-Total             : 2.107538 detik
+Perkalian matriks : 2.605403 detik
+Cari max per baris: 0.002001 detik
+Total             : 2.607404 detik
 --- OpenMP (4 thread) ---
 === SnapGram - Versi OpenMP ===
 Ukuran matriks: 1024 x 1024
 Jumlah thread tersedia: 4
 
 Contoh hasil (5 baris pertama):
-Baris 0 -> Max: 21751 di kolom 998
-Baris 1 -> Max: 22701 di kolom 998
-Baris 2 -> Max: 22715 di kolom 437
-Baris 3 -> Max: 22217 di kolom 998
-Baris 4 -> Max: 22026 di kolom 491
+Baris 0 -> Max: 8544 di kolom 0
+Baris 1 -> Max: 10689 di kolom 1
+Baris 2 -> Max: 10592 di kolom 2
+Baris 3 -> Max: 8762 di kolom 3
+Baris 4 -> Max: 9769 di kolom 4
 
 === Waktu Eksekusi ===
-Perkalian matriks : 1.400803 detik
-Cari max per baris: 0.002130 detik
-Total             : 1.402933 detik
+Perkalian matriks : 1.854852 detik
+Cari max per baris: 0.002100 detik
+Total             : 1.856952 detik
 --- OpenMP (8 thread) ---
 === SnapGram - Versi OpenMP ===
 Ukuran matriks: 1024 x 1024
 Jumlah thread tersedia: 8
 
 Contoh hasil (5 baris pertama):
-Baris 0 -> Max: 21751 di kolom 998
-Baris 1 -> Max: 22701 di kolom 998
-Baris 2 -> Max: 22715 di kolom 437
-Baris 3 -> Max: 22217 di kolom 998
-Baris 4 -> Max: 22026 di kolom 491
+Baris 0 -> Max: 8544 di kolom 0
+Baris 1 -> Max: 10689 di kolom 1
+Baris 2 -> Max: 10592 di kolom 2
+Baris 3 -> Max: 8762 di kolom 3
+Baris 4 -> Max: 9769 di kolom 4
 
 === Waktu Eksekusi ===
-Perkalian matriks : 0.824707 detik
-Cari max per baris: 0.001431 detik
-Total             : 0.826138 detik
+Perkalian matriks : 2.403013 detik
+Cari max per baris: 0.001447 detik
+Total             : 2.404459 detik
 --- MPI (1 proses) ---
 === SnapGram - Versi MPI ===
 Ukuran matriks: 1024 x 1024
 Jumlah proses: 1
 
 Contoh hasil (5 baris pertama):
-Baris 0 -> Max: 21751 di kolom 998
-Baris 1 -> Max: 22701 di kolom 998
-Baris 2 -> Max: 22715 di kolom 437
-Baris 3 -> Max: 22217 di kolom 998
-Baris 4 -> Max: 22026 di kolom 491
+Baris 0 -> Max: 8544 di kolom 0
+Baris 1 -> Max: 10689 di kolom 1
+Baris 2 -> Max: 10592 di kolom 2
+Baris 3 -> Max: 8762 di kolom 3
+Baris 4 -> Max: 9769 di kolom 4
 
 === Waktu Eksekusi ===
-Perkalian matriks : 4.076950 detik
-Cari max per baris: 0.000961 detik
-Total             : 4.077911 detik
+Perkalian matriks : 6.180279 detik
+Cari max per baris: 0.009243 detik
+Total             : 6.189523 detik
 --- MPI (2 proses) ---
 === SnapGram - Versi MPI ===
 Ukuran matriks: 1024 x 1024
 Jumlah proses: 2
 
 Contoh hasil (5 baris pertama):
-Baris 0 -> Max: 21751 di kolom 998
-Baris 1 -> Max: 22701 di kolom 998
-Baris 2 -> Max: 22715 di kolom 437
-Baris 3 -> Max: 22217 di kolom 998
-Baris 4 -> Max: 22026 di kolom 491
+Baris 0 -> Max: 8544 di kolom 0
+Baris 1 -> Max: 10689 di kolom 1
+Baris 2 -> Max: 10592 di kolom 2
+Baris 3 -> Max: 8762 di kolom 3
+Baris 4 -> Max: 9769 di kolom 4
 
 === Waktu Eksekusi ===
-Perkalian matriks : 2.616039 detik
-Cari max per baris: 0.001156 detik
-Total             : 2.617195 detik
+Perkalian matriks : 3.537119 detik
+Cari max per baris: 0.001000 detik
+Total             : 3.538119 detik
 --- MPI (4 proses) ---
 === SnapGram - Versi MPI ===
 Ukuran matriks: 1024 x 1024
 Jumlah proses: 4
 
 Contoh hasil (5 baris pertama):
-Baris 0 -> Max: 21751 di kolom 998
-Baris 1 -> Max: 22701 di kolom 998
-Baris 2 -> Max: 22715 di kolom 437
-Baris 3 -> Max: 22217 di kolom 998
-Baris 4 -> Max: 22026 di kolom 491
+Baris 0 -> Max: 8544 di kolom 0
+Baris 1 -> Max: 10689 di kolom 1
+Baris 2 -> Max: 10592 di kolom 2
+Baris 3 -> Max: 8762 di kolom 3
+Baris 4 -> Max: 9769 di kolom 4
 
 === Waktu Eksekusi ===
-Perkalian matriks : 1.980032 detik
-Cari max per baris: 0.001204 detik
-Total             : 1.981236 detik
+Perkalian matriks : 3.705544 detik
+Cari max per baris: 0.003794 detik
+Total             : 3.709338 detik

@@ -2,16 +2,63 @@
 #include <stdlib.h>
 #include <time.h>
 
-// Ukuran matriks (bisa diubah: 1024, 2048, 4096)
+// Ukuran matriks (bisa diubah: 256, 512, 1024, 2048)
 #define N 1024
 
-// Fungsi untuk mengisi matriks dengan angka acak
+// Struct data perilaku pemakaian aplikasi tiap user
+typedef struct {
+    int jamAktif;         // 0-23
+    int durasiMenit;      // 0-180
+    int kategoriFavorit;  // 0-4 (0=Gaming, 1=Musik, 2=Kuliner, 3=Olahraga, 4=Fashion)
+} Aktivitas;
+
+// Hitung skor kemiripan aktivitas antara 2 user (maks 10)
+int hitungSkor(Aktivitas a, Aktivitas b) {
+    int skor = 0;
+    if (abs(a.jamAktif - b.jamAktif) <= 2) skor += 4;
+    if (abs(a.durasiMenit - b.durasiMenit) <= 20) skor += 3;
+    if (a.kategoriFavorit == b.kategoriFavorit) skor += 3;
+    return skor;
+}
+
+// Baca data aktivitas dari CSV, ambil sebanyak n baris
+Aktivitas* bacaDataCSV(const char *filename, int n) {
+    Aktivitas *aktivitas = (Aktivitas*) malloc(n * sizeof(Aktivitas));
+    FILE *fp = fopen(filename, "r");
+    if (fp == NULL) {
+        printf("Gagal membuka file %s!\n", filename);
+        exit(1);
+    }
+
+    char buffer[100];
+    fgets(buffer, sizeof(buffer), fp); // lewati baris header
+
+    for (int i = 0; i < n; i++) {
+        if (fgets(buffer, sizeof(buffer), fp) == NULL) {
+            printf("Data CSV kurang dari N=%d baris!\n", n);
+            exit(1);
+        }
+        sscanf(buffer, "%d,%d,%d",
+               &aktivitas[i].jamAktif,
+               &aktivitas[i].durasiMenit,
+               &aktivitas[i].kategoriFavorit);
+    }
+
+    fclose(fp);
+    return aktivitas;
+}
+
+// Fungsi untuk mengisi matriks M berdasarkan kemiripan aktivitas antar user (dari CSV)
 void generateMatrix(int **matrix, int n) {
+    Aktivitas *aktivitas = bacaDataCSV("data_aktivitas.csv", n);
+
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
-            matrix[i][j] = rand() % 10; // angka 0-9 biar hasil kali gak overflow
+            matrix[i][j] = hitungSkor(aktivitas[i], aktivitas[j]);
         }
     }
+
+    free(aktivitas);
 }
 
 // Alokasi matriks N x N secara dinamis
@@ -64,13 +111,11 @@ int main() {
     printf("=== SnapGram - Versi Sekuensial ===\n");
     printf("Ukuran matriks: %d x %d\n\n", N, N);
 
-    srand(42);
-
     // Alokasi matriks
     int **M = allocateMatrix(N);
     int **Result = allocateMatrix(N);
 
-    // Generate matriks M dengan angka acak
+    // Generate matriks M dari data CSV (bukan random lagi)
     generateMatrix(M, N);
 
     // Ukur waktu perkalian matriks

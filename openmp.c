@@ -5,10 +5,60 @@
 
 #define N 1024
 
+// Struct data perilaku pemakaian aplikasi tiap user
+typedef struct {
+    int jamAktif;         // 0-23
+    int durasiMenit;      // 0-180
+    int kategoriFavorit;  // 0-4 (0=Gaming, 1=Musik, 2=Kuliner, 3=Olahraga, 4=Fashion)
+} Aktivitas;
+
+// Hitung skor kemiripan aktivitas antara 2 user (maks 10)
+int hitungSkor(Aktivitas a, Aktivitas b) {
+    int skor = 0;
+    if (abs(a.jamAktif - b.jamAktif) <= 2) skor += 4;
+    if (abs(a.durasiMenit - b.durasiMenit) <= 20) skor += 3;
+    if (a.kategoriFavorit == b.kategoriFavorit) skor += 3;
+    return skor;
+}
+
+// Baca data aktivitas dari CSV, ambil sebanyak n baris
+Aktivitas* bacaDataCSV(const char *filename, int n) {
+    Aktivitas *aktivitas = (Aktivitas*) malloc(n * sizeof(Aktivitas));
+    FILE *fp = fopen(filename, "r");
+    if (fp == NULL) {
+        printf("Gagal membuka file %s!\n", filename);
+        exit(1);
+    }
+
+    char buffer[100];
+    fgets(buffer, sizeof(buffer), fp); // lewati baris header
+
+    for (int i = 0; i < n; i++) {
+        if (fgets(buffer, sizeof(buffer), fp) == NULL) {
+            printf("Data CSV kurang dari N=%d baris!\n", n);
+            exit(1);
+        }
+        sscanf(buffer, "%d,%d,%d",
+               &aktivitas[i].jamAktif,
+               &aktivitas[i].durasiMenit,
+               &aktivitas[i].kategoriFavorit);
+    }
+
+    fclose(fp);
+    return aktivitas;
+}
+
+// Isi matriks M berdasarkan kemiripan aktivitas antar user (dari CSV)
 void generateMatrix(int **matrix, int n) {
-    for (int i = 0; i < n; i++)
-        for (int j = 0; j < n; j++)
-            matrix[i][j] = rand() % 10;
+    Aktivitas *aktivitas = bacaDataCSV("data_aktivitas.csv", n);
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            matrix[i][j] = hitungSkor(aktivitas[i], aktivitas[j]);
+        }
+    }
+
+    free(aktivitas);
 }
 
 int** allocateMatrix(int n) {
@@ -57,11 +107,10 @@ int main() {
     printf("Ukuran matriks: %d x %d\n", N, N);
     printf("Jumlah thread tersedia: %d\n\n", omp_get_max_threads());
 
-    srand(42); // seed tetap biar hasilnya bisa dibandingkan dengan versi lain
-
     int **M = allocateMatrix(N);
     int **Result = allocateMatrix(N);
 
+    // Generate matriks M dari data CSV (bukan random lagi)
     generateMatrix(M, N);
 
     double start = omp_get_wtime();
