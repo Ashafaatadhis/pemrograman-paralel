@@ -213,6 +213,8 @@ make clean
 
 | Nama | NIM |
 | ---- | --- |
-|      |     |
-|      |     |
-|      |     |
+| Adhis Mauliyahsa Ashafaat | 50422079 |
+| Irfan Fadhila Aryantoro | 50422720 |
+| Muhammad Rafid Kamil | 51422111 |
+| Muhammad Rafli Hariandy | 51422703 |
+| Muhammad Tio Safrian | 51422163 |
